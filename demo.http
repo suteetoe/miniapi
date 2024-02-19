@@ -1,0 +1,16 @@
+
+### Get Root Path
+GET http://localhost:8080/
+
+
+
+### Lis Demo Data
+GET http://localhost:8080/demo
+
+
+### Get Demo Code 001
+GET http://localhost:8080/demo/002
+
+
+### Get XDemo
+GET http://localhost:8080/xdemo
