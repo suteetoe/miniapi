@@ -3,7 +3,7 @@
 ##
 ## Builder
 ##
-FROM golang:1.20.2-alpine3.17 AS builder
+FROM golang:1.21-alpine3.18 AS builder
 
 RUN apk add alpine-sdk
 RUN apk add librdkafka=1.9.2-r0
