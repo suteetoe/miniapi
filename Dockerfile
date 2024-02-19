@@ -28,7 +28,7 @@ COPY --from=builder /go/app/go-app .
 COPY ./startup.sh /root/startup.sh
 RUN chmod +x /root/startup.sh 
 
-COPY ./tdict-std.txt /root/tdict-std.txt
+# COPY ./tdict-std.txt /root/tdict-std.txt
 
 # ENTRYPOINT ["filebeat", "-c", "/usr/share/filebeat/filebeat.yml"]
 CMD ["filebeat", "-c", "/usr/share/filebeat/filebeat.yml"]
