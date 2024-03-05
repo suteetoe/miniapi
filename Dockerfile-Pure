@@ -19,4 +19,15 @@ ADD . /go/app
 
 RUN CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build  -o go-app -tags musl main.go  
 
-ENTRYPOINT /go/app/go-app
+
+##
+## Deploy
+##
+FROM alpine:3.17
+WORKDIR /root/
+COPY --from=builder /go/app/go-app .
+# COPY ./tdict-std.txt /root/tdict-std.txt
+
+RUN mkdir /var/log/vfapi
+
+ENTRYPOINT  /root/go-app
