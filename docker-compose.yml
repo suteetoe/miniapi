@@ -1,0 +1,7 @@
+version: '3.9'
+
+services:
+  miniapipure:
+    image: ghcr.io/suteetoe/miniapi-pureapp:main
+    ports:
+     - 8080:8080
