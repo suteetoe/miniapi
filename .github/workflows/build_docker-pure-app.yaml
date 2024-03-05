@@ -1,4 +1,4 @@
-name: Build docker image
+name: Build Pure App Image
 on: [workflow_dispatch]
 
 env:
